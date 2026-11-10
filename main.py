@@ -60,3 +60,21 @@ def solution(s):
 
 def descending_order(num):
     return int("".join(sorted(str(num), reverse=True)))
+
+
+# Подсчитайте количество дубликатов.
+# Напишите функцию, которая будет возвращать количество уникальных нечувствительных к регистру буквенных символов и цифр, встречающихся более одного раза во входной строке. Предполагается, что входная строка содержит только буквы (как прописные, так и строчные) и цифры.
+
+# Пример
+# "abcde" -> 0 # no characters repeats more than once
+# "aabbcde" -> 2 # 'a' and 'b'
+# "aabBcde" -> 2 # 'a' occurs twice and 'b' twice (`b` and `B`)
+# "неделимость" -> 1 # 'i' occurs six times
+# "неделимость" -> 2 # 'i' occurs seven times and 's' occurs twice
+# "aA11" -> 2 # 'a' and '1'
+# "ABBA" -> 2 # 'A' and 'B' each occur twice
+
+def duplicate_count(text):
+    text = text.lower()
+    return sum(1 for ch in set(text) if text.count(ch) > 1)
+
