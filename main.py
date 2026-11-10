@@ -78,3 +78,18 @@ def duplicate_count(text):
     text = text.lower()
     return sum(1 for ch in set(text) if text.count(ch) > 1)
 
+
+# Напишите программу, которая фильтрует список строк и возвращает список, содержащий только имена ваших друзей.
+
+# Если в имени ровно 4 буквы, можете быть уверены, что это ваш друг! В противном случае, можете быть уверены, что это не он...
+
+# Input = ["Ryan", "Kieran", "Jason", "Yous"]
+# Output = ["Ryan", "Yous"]
+
+# Input = ["Peter", "Stephen", "Joe"]
+# Output = []
+# Входные строки будут содержать только буквы.
+# Примечание: в выходных данных сохраните исходный порядок имен.
+
+def friend(x):
+    return [name for name in x if len(name) == 4]
