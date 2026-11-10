@@ -93,3 +93,17 @@ def duplicate_count(text):
 
 def friend(x):
     return [name for name in x if len(name) == 4]
+
+# Принимает 2 строки s1, s2содержащие только буквы от aдо z. Возвращает новую отсортированную строку (в алфавитном порядке по возрастанию), максимально длинную, содержащую различные буквы — каждая из которых взята только один раз — из s1 или s2.
+
+# Примеры:
+# a = "xyaabbbccccdefww"
+# b = "xxxxyyyyabklmopq"
+# longest(a, b) -> "abcdefklmopqwxy"
+
+# a = "abcdefghijklmnopqrstuvwxyz"
+# longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+
+
+def longest(s1, s2):
+    return "".join(sorted(set(s1 + s2)))
