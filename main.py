@@ -158,4 +158,6 @@ def reverse_words(text):
 
     return result
     
-    
+def high_and_low(numbers):
+    nums = numbers.split()
+    return max(nums, key=int) + " " + min(nums, key=int)
