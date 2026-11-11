@@ -140,3 +140,8 @@ def get_count(string):
         if letters in "aeiou":
             count +=1
     return count
+
+
+
+def validate_pin(pin):
+    return len(pin) in (4, 6) and pin.isdigit()
