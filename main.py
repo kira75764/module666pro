@@ -145,3 +145,17 @@ def get_count(string):
 
 def validate_pin(pin):
     return len(pin) in (4, 6) and pin.isdigit()
+
+
+def reverse_words(text):
+    words = text.split(' ')
+    
+    reverse_words = []
+    for word in words:
+        reverse_words.append(word[::-1])
+
+    result = ' '.join(reverse_words)
+
+    return result
+    
+    
