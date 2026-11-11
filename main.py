@@ -124,3 +124,19 @@ def square_digits(num):
 def is_isogram(string):
     string = string.lower()
     return len(string) == len(set(string))
+
+
+
+
+# Возвращает количество гласных в заданной строке.
+
+# В этой ката мы будем рассматривать a, e, i, o, как гласные (но не ).uy
+
+# Входная строка будет состоять только из строчных букв и/или пробелов.
+
+def get_count(string):
+    count = 0
+    for letters in string:
+        if letters in "aeiou":
+            count +=1
+    return count
