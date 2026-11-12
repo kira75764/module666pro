@@ -161,3 +161,13 @@ def reverse_words(text):
 def high_and_low(numbers):
     nums = numbers.split()
     return max(nums, key=int) + " " + min(nums, key=int)
+
+
+
+def alphabet_position(text):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    result = []
+    for c in text.lower():
+        if c.isalpha():
+            result.append(str(alphabet.index(c) + 1))
+    return " ".join(result)
