@@ -171,3 +171,13 @@ def alphabet_position(text):
         if c.isalpha():
             result.append(str(alphabet.index(c) + 1))
     return " ".join(result)
+
+
+def increment_string(string):
+    i = len(string)
+    while i > 0 and string [i - 1] .isdigit():
+        i -=1
+    digits = string[i:]
+    if digits == "":
+        return string + "1"
+    return string[:i] + str(int(digits) + 1).zfill(len(digits))
