@@ -181,3 +181,15 @@ def increment_string(string):
     if digits == "":
         return string + "1"
     return string[:i] + str(int(digits) + 1).zfill(len(digits))
+
+
+def to_camel_case(text):
+    if text == "":
+        return ""
+    
+    words = text.replace ("_", "-").split("-")
+    result = words [0]
+    for word in words [1:]:
+        result += word [0] .upper() + word[1:]
+    return result
+            
