@@ -216,5 +216,16 @@ def move_zeros(lst):
     return not_zeros + zeros
     
 
+def expanded_form(num):
+    s = str(num)
+    n = len(s)
+    parts = []
 
+    for i in range(n):
+        digit = s[i]
+        if digit != "0":
+            zeros = n - i - 1
+            parts.append(digit + "0" * zeros)
+
+    return " + ".join(parts)
 
