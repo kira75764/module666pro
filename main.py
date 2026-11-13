@@ -205,3 +205,16 @@ def in_array(array1, array2):
 
 
 
+def move_zeros(lst):
+    zeros = []
+    not_zeros = []
+    for x in lst:
+        if x == 0:
+            zeros.append(x)
+        else:
+            not_zeros.append(x)
+    return not_zeros + zeros
+    
+
+
+
