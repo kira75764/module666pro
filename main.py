@@ -229,3 +229,10 @@ def expanded_form(num):
 
     return " + ".join(parts)
 
+
+def bool_to_word(rasul):
+    if rasul:
+        return "Yes"
+    else:
+        return "No"
+
