@@ -244,3 +244,7 @@ def solution(string):
 def summation(num):
     return num * (num + 1) // 2
 
+
+def opposite(number):
+  return -number
+
