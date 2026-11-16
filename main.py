@@ -240,3 +240,7 @@ def bool_to_word(rasul):
 def solution(string):
     return string [::-1]
 
+
+def summation(num):
+    return num * (num + 1) // 2
+
