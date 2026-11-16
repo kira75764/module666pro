@@ -236,3 +236,7 @@ def bool_to_word(rasul):
     else:
         return "No"
 
+
+def solution(string):
+    return string [::-1]
+
